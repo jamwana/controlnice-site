@@ -171,7 +171,7 @@
     </div>
   </section>
 
-  <!-- Comparison Quick-Reference -->
+  <!-- Comparison Quick-Reference with Toggle -->
   <section class="comparison-section" style="background: var(--color-bg);">
     <div class="container container-wide">
       <div class="section-header">
@@ -214,6 +214,92 @@
           </tr>
         </tbody>
       </table>
+
+      <!-- Interactive Comparison Toggle: ControlNice vs Hexagon -->
+      <div class="comparison-toggle-wrapper" id="comparisonToggle">
+        <div class="comparison-toggle-header">
+          <h3>See How We Stack Up</h3>
+          <div class="toggle-switch">
+            <button class="toggle-btn active" data-target="ours">ControlNice</button>
+            <button class="toggle-btn" data-target="competitor">Hexagon Absolute Arm</button>
+          </div>
+        </div>
+        <table class="comparison-table comp-table" id="compTable">
+          <thead>
+            <tr>
+              <th>Specification</th>
+              <th>ControlNice AACMM-4500</th>
+              <th class="competitor-data">Hexagon Absolute Arm 8545</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Max Range</td>
+              <td class="our-data">4.5m</td>
+              <td class="competitor-data">4.5m</td>
+            </tr>
+            <tr>
+              <td>Repeatability (at full range)</td>
+              <td class="our-data">&le; 0.020mm</td>
+              <td class="competitor-data">&le; 0.030mm</td>
+            </tr>
+            <tr>
+              <td>Precision Stability at Max Extension</td>
+              <td class="our-data">Zero decay</td>
+              <td class="competitor-data">~15% increase in error</td>
+            </tr>
+            <tr>
+              <td>Warranty</td>
+              <td class="our-data">3 Years</td>
+              <td class="competitor-data">1 Year (standard)</td>
+            </tr>
+            <tr>
+              <td>Factory Calibration Included</td>
+              <td class="our-data">Yes</td>
+              <td class="competitor-data">Additional cost</td>
+            </tr>
+            <tr>
+              <td>Lead Time</td>
+              <td class="our-data">4-6 Weeks</td>
+              <td class="competitor-data">8-12 Weeks</td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="margin-top: var(--spacing-sm); text-align: center;">
+          <a href="#" class="btn btn-sm btn-outline-accent">Download Full Comparison Matrix (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenger's Advantage Section -->
+  <section class="challenger-section">
+    <div class="container container-wide">
+      <div class="challenger-header">
+        <span class="badge">The Challenger's Advantage</span>
+        <h2>Why Manufacturers Are <span class="text-accent">Switching</span></h2>
+        <p>Three areas where ControlNice outperforms the industry standard.</p>
+      </div>
+      <div class="challenger-grid">
+        <div class="challenger-card">
+          <div class="advantage-label">Scale</div>
+          <div class="advantage-metric">4.5m</div>
+          <div class="advantage-desc">Full measurement range without compromising on accuracy. One arm handles wing sections to turbine blades.</div>
+          <div class="vs-line">vs Hexagon: <strong>same max range, but 33% better precision at full extension</strong></div>
+        </div>
+        <div class="challenger-card">
+          <div class="advantage-label">Stability</div>
+          <div class="advantage-metric">Zero Decay</div>
+          <div class="advantage-desc">Our proprietary encoder compensation algorithm ensures micron-level accuracy is maintained across the entire measurement envelope.</div>
+          <div class="vs-line">vs Hexagon: <strong>accuracy error increases ~15% at maximum arm extension</strong></div>
+        </div>
+        <div class="challenger-card">
+          <div class="advantage-label">Warranty</div>
+          <div class="advantage-metric">3 Years</div>
+          <div class="advantage-desc">Triple the standard warranty period. Direct-from-manufacturer support with guaranteed response times.</div>
+          <div class="vs-line">vs Hexagon: <strong>1-year standard warranty, extended coverage at premium cost</strong></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -224,6 +310,22 @@
       <div class="cta-actions">
         <a href="about.html#contact" class="btn btn-primary">Request a Free Technical Consultation</a>
         <a href="#" class="btn btn-secondary">Download Full Product Catalog</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter-section">
+    <div class="container container-wide">
+      <div class="newsletter-inner">
+        <div class="newsletter-text">
+          <h3>Subscribe to <span class="text-accent">Precision Pulse</span></h3>
+          <p>Join 5,000+ Metrology Professionals. Get monthly insights on solving large-scale inspection challenges, exclusive whitepapers, and ROI calculators.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" name="email" placeholder="Enter your work email" required>
+          <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+        </form>
       </div>
     </div>
   </section>
@@ -278,8 +380,14 @@
   </footer>
 
   <!-- Floating CTA -->
-  <div class="floating-cta">
+  <div class="floating-cta" id="floatingCta">
     <a href="about.html#contact" class="btn btn-primary btn-sm">Request 1-on-1 Precision Audit</a>
+  </div>
+
+  <!-- Sticky RFQ Bar -->
+  <div class="sticky-rfq" id="stickyRfq">
+    <p>Looking for a <span class="text-accent" style="font-weight:600;">portable CMM</span>? Get specs, pricing &amp; compatibility in one click.</p>
+    <a href="about.html#contact" class="btn btn-primary btn-sm">Instant Quote</a>
   </div>
 
   <script src="js/main.js"></script>

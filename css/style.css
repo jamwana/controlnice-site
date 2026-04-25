@@ -972,6 +972,246 @@ a {
   color: var(--color-accent);
 }
 
+/* ========================================
+   Conversion & Lead Gen Components
+   ======================================== */
+
+/* Sticky RFQ Bar */
+.sticky-rfq {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 998;
+  background: var(--color-bg-elevated);
+  border-top: 1px solid var(--color-accent);
+  padding: var(--spacing-xs) var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  transform: translateY(100%);
+  transition: transform var(--transition-base);
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.5);
+}
+
+.sticky-rfq.visible {
+  transform: translateY(0);
+}
+
+.sticky-rfq p {
+  color: var(--color-gray-200);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.sticky-rfq .btn {
+  white-space: nowrap;
+}
+
+/* Comparison Toggle */
+.comparison-toggle-wrapper {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-gray-800);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.comparison-toggle-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.comparison-toggle-header h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background: var(--color-bg);
+  border-radius: 999px;
+  padding: 4px;
+  border: 1px solid var(--color-gray-800);
+}
+
+.toggle-btn {
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: var(--color-gray-400);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-primary);
+}
+
+.toggle-btn.active {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.comparison-table.comp-table {
+  margin-top: var(--spacing-sm);
+}
+
+.comparison-table.comp-table td.competitor-data {
+  opacity: 0.4;
+  transition: opacity var(--transition-base);
+}
+
+.comparison-table.comp-table.show-competitor td.competitor-data {
+  opacity: 1;
+}
+
+.comparison-table.comp-table td.our-data {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* Challenger's Advantage Section */
+.challenger-section {
+  padding: var(--spacing-xl) 0;
+  background: linear-gradient(135deg, var(--color-bg-card) 0%, var(--color-bg) 100%);
+  border-top: 1px solid var(--color-accent-dim);
+  border-bottom: 1px solid var(--color-accent-dim);
+}
+
+.challenger-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.challenger-header .badge {
+  display: inline-block;
+  background: var(--color-accent-dim);
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.challenger-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+}
+
+.challenger-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-gray-800);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.challenger-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-accent);
+}
+
+.challenger-card .advantage-label {
+  font-size: 0.75rem;
+  color: var(--color-gray-600);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--spacing-xs);
+}
+
+.challenger-card .advantage-metric {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  line-height: 1.1;
+  margin-bottom: var(--spacing-xs);
+}
+
+.challenger-card .advantage-desc {
+  font-size: 0.9rem;
+  color: var(--color-gray-400);
+  line-height: 1.6;
+}
+
+.challenger-card .vs-line {
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: 1px dashed var(--color-gray-800);
+  font-size: 0.8rem;
+  color: var(--color-gray-600);
+}
+
+.challenger-card .vs-line strong {
+  color: var(--color-red);
+  font-weight: 600;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  padding: var(--spacing-lg) 0;
+  background: var(--color-bg-elevated);
+  border-top: 1px solid var(--color-gray-800);
+}
+
+.newsletter-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.newsletter-text h3 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.newsletter-text p {
+  font-size: 0.9rem;
+  max-width: 500px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  padding: 0.75rem 1rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-gray-800);
+  border-radius: var(--radius-sm);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  min-width: 280px;
+}
+
+.newsletter-form input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
 /* Floating CTA */
 .floating-cta {
   position: fixed;
@@ -1004,6 +1244,8 @@ a {
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .philosophy-cards { grid-template-columns: 1fr; }
   .regions-grid { grid-template-columns: repeat(2, 1fr); }
+  .challenger-grid { grid-template-columns: repeat(2, 1fr); }
+  .newsletter-inner { flex-direction: column; text-align: center; }
 }
 
 @media (max-width: 768px) {
@@ -1028,6 +1270,11 @@ a {
   .applications-list { grid-template-columns: 1fr; }
   .regions-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
+  .challenger-grid { grid-template-columns: 1fr; }
+  .comparison-toggle-header { flex-direction: column; align-items: flex-start; }
+  .newsletter-form input { min-width: 100%; }
+  .sticky-rfq { flex-direction: column; gap: var(--spacing-xs); padding: var(--spacing-xs) var(--spacing-sm); }
+  .floating-cta { bottom: 80px; }
 }
 
 /* Page transition animations */
