@@ -1,0 +1,5 @@
+# robots.txt — ControlNice Global Website
+User-agent: *
+Allow: /
+
+Sitemap: https://jamwana.github.io/controlnice-site/sitemap.xml

@@ -1284,8 +1284,10 @@ a {
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .hero-visual { display: none; }
-  .hero-content { max-width: 100%; }
+  .hero-visual { display: block; height: 300px; margin-top: var(--spacing-md); }
+  .hero { flex-direction: column; }
+  .hero-content { max-width: 100%; text-align: center; }
+  .hero-actions { justify-content: center; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .value-grid { grid-template-columns: 1fr; }
   .industries-grid { grid-template-columns: repeat(3, 1fr); }
@@ -1298,6 +1300,18 @@ a {
   .regions-grid { grid-template-columns: repeat(2, 1fr); }
   .challenger-grid { grid-template-columns: repeat(2, 1fr); }
   .newsletter-inner { flex-direction: column; text-align: center; }
+  /* Comparison table wrapper: scrollable on smaller screens */
+  .comparison-toggle-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
+
+@media (max-width: 834px) {
+  .industries-grid { grid-template-columns: repeat(2, 1fr); }
+  .regions-grid { grid-template-columns: 1fr 1fr; }
+  .challenger-grid { grid-template-columns: 1fr; }
+  .comparison-table { min-width: 600px; }
+  .product-cta-stack { flex-direction: column; }
+  .product-ctas { flex-direction: column; gap: var(--spacing-sm); }
+  .product-ctas .btn { text-align: center; }
 }
 
 @media (max-width: 768px) {
@@ -1318,15 +1332,24 @@ a {
   }
 
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .industries-grid { grid-template-columns: repeat(2, 1fr); }
+  .industries-grid { grid-template-columns: 1fr; }
   .applications-list { grid-template-columns: 1fr; }
   .regions-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
-  .challenger-grid { grid-template-columns: 1fr; }
   .comparison-toggle-header { flex-direction: column; align-items: flex-start; }
   .newsletter-form input { min-width: 100%; }
   .sticky-rfq { flex-direction: column; gap: var(--spacing-xs); padding: var(--spacing-xs) var(--spacing-sm); }
   .floating-cta { bottom: 80px; }
+  .floating-cta .btn { font-size: 0.85rem; padding: 10px 18px; }
+  /* Extra bottom padding for contact section so sticky bar doesn't cover it */
+  #contact { padding-bottom: 120px; }
+  /* Reduce hero headline on mobile */
+  .hero-content h1 { font-size: clamp(1.75rem, 5vw, 3rem); }
+  .page-header h1 { font-size: clamp(1.5rem, 4.5vw, 2.5rem); }
+  /* Clamp body text for readability */
+  p, li, td, th, input, textarea, select {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+  }
 }
 
 /* Page transition animations */
